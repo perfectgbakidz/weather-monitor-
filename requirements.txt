@@ -2,4 +2,5 @@ fastapi
 uvicorn 
 sqlalchemy 
 pydantic 
-requests
+request
+pytz
