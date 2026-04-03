@@ -7,6 +7,16 @@ from datetime import datetime
 import requests
 import pytz
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ================= CONFIG =================
 DATABASE_URL = "sqlite:///./weather.db"
 TIMEZONE = "Africa/Lagos"
